@@ -1,0 +1,14 @@
+//
+// Created by hylbr on 5-5-2021.
+//
+
+#ifndef ARDUINOKASTBAAN_ARDUINOKASTBAANDRIVER_H
+#define ARDUINOKASTBAAN_ARDUINOKASTBAANDRIVER_H
+
+
+class ArduinoKastBaanDriver {
+
+};
+
+
+#endif //ARDUINOKASTBAAN_ARDUINOKASTBAANDRIVER_H
