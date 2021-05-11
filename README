@@ -1,0 +1,12 @@
+# ACMR
+I started this project to be able to control my cupboard model railway layout without
+spending tons of cash on vendor-specific transformers and point motors.
+
+## Features:
+
+
+## To do list:
+* Finish motor driver
+* Add support for signals (togglebutton maybe?)
+* Tie everything together as a functioning unit
+* MAYBE switch to a arduino mega since im running out of in/outputs faster than i like.
