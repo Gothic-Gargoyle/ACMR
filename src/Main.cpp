@@ -11,7 +11,7 @@
 //SwitchBoard sb(sp);
 
 SoftwareSerial serial(0,1); //tx & rx
-Motordriver motordriver(9,8,7,A0);
+Motordriver motordriver(11,12,13,A0);
 void setup() {
 // write your initialization code here
 serial.begin(9600);
