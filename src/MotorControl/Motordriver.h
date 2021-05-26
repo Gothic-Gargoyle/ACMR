@@ -22,11 +22,13 @@ private:
 
 
     int potmeterValue;
+    int mappedValue;
+
 public:
-    Motordriver(byte motorDir,byte motorIn1, byte motorIn2, byte potmeterPin);
+    Motordriver(byte motorSpeed,byte motorDir1, byte motorDir2, byte potmeterPin);
     void init();
 
-    void readPotmeterInput();
+    int readPotmeterInput();
 
     void motorControl();
 

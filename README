@@ -10,3 +10,24 @@ spending tons of cash on vendor-specific transformers and point motors.
 * Add support for signals (togglebutton maybe?)
 * Tie everything together as a functioning unit
 * MAYBE switch to a arduino mega since im running out of in/outputs faster than i like.
+
+
+# WIRING:
+Input Pins:
+    Switchboard:A1-5  Button matrix an option? Analog pins can be digital-in
+    Potmeter: A0
+
+Output Pins:
+    Servo's: D0-7 (pwm) pins, if Servo library gets used, pins 9 & 10 are no longer PWM.
+    Motor control: 1 PWM pin D11, D12-13 for direction
+    (optional) Light Signal: 2? D9-10 (sadly no PWM, F)
+
+Voltage:
+12v 3a DC adapter
+    * 12v:
+        * L298N motordriver via screw terminals
+        * Arduino via barrel jack
+    * Stepdown to 5v DC:
+        * 7 servo's á 250 mA/piece
+
+All have common ground!
