@@ -36,6 +36,8 @@ void Motordriver::motorControl(){
     if (readPotmeterInput() > 512) {
         mappedValue = map(readPotmeterInput(), 512, 1023, 0, 255);
         //serial.print(value + "\n");
+        digitalWrite(motorDir1,HIGH);
+        digitalWrite(motorDir2,LOW);
         analogWrite(motorSpeed, mappedValue);
         delay(10); //moet delay eruit halen eigs :')
 
@@ -43,6 +45,8 @@ void Motordriver::motorControl(){
     }else {
         mappedValue = map(readPotmeterInput(), 511, 0, 0, 255);
         //serial.print(value + "\n");
+        digitalWrite(motorDir1,LOW);
+        digitalWrite(motorDir2,HIGH);
         analogWrite(motorSpeed, mappedValue);
         delay(10);
     }

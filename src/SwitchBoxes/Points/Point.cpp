@@ -37,7 +37,7 @@ void Point::activateOutput() {
 }
 
 void Point::setOutput(){
-    digitalWrite(pointOutput,lastPointState);
+    digitalWrite(pointOutput,lastPointState); //vervangen door servoaansturing!
 }
 
 void Point::deactivateOutput(){
