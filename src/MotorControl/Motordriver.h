@@ -23,6 +23,7 @@ private:
 
     int potmeterValue;
     int mappedValue;
+    
 
 public:
     Motordriver(byte motorSpeed,byte motorDir1, byte motorDir2, byte potmeterPin);

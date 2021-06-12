@@ -8,8 +8,6 @@ Motordriver::Motordriver(byte motorSpeed,byte motorDir1, byte motorDir2, byte po
     this->motorDir1 = motorDir1;
     this->motorDir2 = motorDir2;
     this->potMeterPin = potmeterPin;
-    potmeterValue = 0;
-
     init();
 }
 void Motordriver::init() {
@@ -17,6 +15,7 @@ void Motordriver::init() {
     pinMode(motorDir1,OUTPUT);
     pinMode(motorDir2,OUTPUT);
     pinMode(potMeterPin,INPUT);
+    TCCR2B = (TCCR2B & 0b11111000) | 0x06; //Pin 11 en 3 zitten nu op 122,55Hz
 }
 
 int Motordriver::readPotmeterInput(){

@@ -1,5 +1,5 @@
 # ACMR
-I started this project to be able to control my cupboard model railway layout without
+I started this project to be able to control my cupboardn scale model railway layout without
 spending tons of cash on vendor-specific transformers and point motors.
 
 ## Features:
@@ -26,8 +26,8 @@ Voltage:
 12v 3a DC adapter
     * 12v:
         * L298N motordriver via screw terminals
-        * Arduino via barrel jack
-    * Stepdown to 5v DC:
-        * 7 servo's á 250 mA/piece
 
+    * Stepdown to 7v DC:
+        * 7 servo's á 250 mA/piece
+        * Arduino via barrel jack
 All have common ground!
