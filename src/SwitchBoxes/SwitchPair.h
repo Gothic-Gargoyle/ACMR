@@ -22,7 +22,7 @@ public:
     byte returnSwitchState();
 
 
-    void switchSwitchPair();
+    void switchPointPair();
 };
 
 
