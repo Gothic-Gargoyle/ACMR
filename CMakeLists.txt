@@ -30,4 +30,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/SwitchBoxes/Point.cpp src/SwitchBoxes/Point.cpp src/SwitchBoxes/Point.h src/MotorControl/Motordriver.cpp src/MotorControl/Motordriver.h src/SwitchBoxes/SwitchBoard.cpp src/SwitchBoxes/SwitchBoard.h src/SwitchBoxes/Button.cpp src/SwitchBoxes/Button.h src/SwitchBoxes/SwitchPair.cpp src/SwitchBoxes/SwitchPair.h src/BaanDriver/ArduinoKastbaanDriver.cpp src/BaanDriver/ArduinoKastbaanDriver.h)
+add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/SwitchBoxes/Point.cpp src/SwitchBoxes/Point.cpp src/SwitchBoxes/Point.h src/MotorControl/Motordriver.cpp src/MotorControl/Motordriver.h src/SwitchBoxes/SwitchBoard.cpp src/SwitchBoxes/SwitchBoard.h src/SwitchBoxes/Button.cpp src/SwitchBoxes/Button.h src/SwitchBoxes/SwitchPair.cpp src/SwitchBoxes/SwitchPair.h src/LayoutDriver/LayoutDriver.cpp src/LayoutDriver/LayoutDriver.h)
