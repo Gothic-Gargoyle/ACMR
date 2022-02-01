@@ -6,23 +6,23 @@
 #define ARDUINOKASTBAAN_SWITCHPAIR_H
 
 
-#include "SwitchBoxes/Points/Point.h"
+#include "Point.h"
 
 class SwitchPair {
 private:
     Point yellowPoint;
     Point greenPoint;
+    byte switchState;
 
 public:
     SwitchPair(Point yellowPoint, Point greenPoint);
-
-    void switchPoint(Point yPoint, Point gPoint);
-
+    void switchPoint(Point point1, Point point2, byte stateSwitchTo);
     void switchYellowPoint();
-
     void switchGreenPoint();
+    byte returnSwitchState();
 
 
+    void switchSwitchPair();
 };
 
 

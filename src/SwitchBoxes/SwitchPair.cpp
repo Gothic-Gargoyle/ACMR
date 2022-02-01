@@ -3,24 +3,32 @@
 //
 
 #include "SwitchPair.h"
+enum switchStates {UNTOUCHED,YELLOW,GREEN};
 
 SwitchPair::SwitchPair(Point yellowPoint, Point greenPoint) :  yellowPoint(yellowPoint),greenPoint(greenPoint) {
     this->yellowPoint= yellowPoint;
-    this->yellowPoint= greenPoint;
+    this->greenPoint= greenPoint;
+    this->switchState = UNTOUCHED;
 }
 
-void SwitchPair::switchPoint(Point yPoint,Point gPoint){
-    yPoint.activateOutput();
-    gPoint.deactivateOutput();
+void SwitchPair::switchPoint(Point point1, Point point2, byte stateSwitchTo) {
+    point1.activateOutput();
+    switchState = stateSwitchTo;
 }
 
-void SwitchPair::switchYellowPoint(){
-    switchPoint(yellowPoint,greenPoint);
-    Serial.print("yellow point activated");
-
+void SwitchPair::switchGreenPoint() {
+    switchPoint(greenPoint, yellowPoint, GREEN);
 }
 
-void SwitchPair::switchGreenPoint(){
-    switchPoint(greenPoint,yellowPoint);
-    Serial.print("Green point activated");
+void SwitchPair::switchYellowPoint() {
+    switchPoint(yellowPoint,greenPoint, YELLOW);
+}
+
+void SwitchPair::switchSwitchPair(){
+    switchYellowPoint();
+    switchGreenPoint();
+}
+
+byte SwitchPair::returnSwitchState(){
+    return switchState;
 }

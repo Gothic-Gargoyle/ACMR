@@ -1,6 +1,6 @@
 .pio
 CMakeListsPrivate.txt
 cmake-build-*/ 
-/.idea/misc.xml
+/.idea/*
 /test/README
 /lib/

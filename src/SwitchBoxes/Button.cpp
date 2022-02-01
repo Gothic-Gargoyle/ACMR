@@ -5,8 +5,6 @@
 #include "Button.h"
 Button::Button(byte buttonPin){
     this->buttonPin = buttonPin;
-    time = 0;
-    debounce = 50;
     init();
 }
 
@@ -19,7 +17,7 @@ void Button::update(){
     byte newReading = digitalRead(buttonPin);
     if (newReading != lastReading){
         lastDebounceTime = millis();
-        if (millis() - lastDebounceTime > debounce){
+        if (millis() - lastDebounceTime > debounceDelay){
             buttonState = newReading;
         }
         lastReading = newReading;

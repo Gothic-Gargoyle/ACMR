@@ -9,18 +9,16 @@
 class Button {
 private:
     byte buttonPin;
-    int time;
     byte lastReading;
-    int lastDebounceTime = 0;
-    int debounce;
     byte buttonState;
+    int lastDebounceTime = 0;
+    int debounceDelay = 250;
+
 public:
     Button(byte buttonPin);
     void init();
     void update();
-    unsigned char getButtonState(byte buttonPin);
     bool isPressed();
-
     byte getButtonState();
 };
 

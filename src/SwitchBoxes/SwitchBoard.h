@@ -7,11 +7,8 @@
 #include "SwitchPair.h"
 class SwitchBoard {
 private:
-    SwitchPair sp1;
 public:
-    SwitchBoard(SwitchPair sp1);
-
-    void switchSp1();
+    SwitchBoard();
 };
 
 

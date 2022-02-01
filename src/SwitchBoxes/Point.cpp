@@ -3,42 +3,37 @@
 //
 
 #include "Point.h"
-
-Point::Point(Button pointInput, byte pointOutput) : pointInput(pointInput) {
+Point::Point(Button pointInput,byte pointOutput) : pointInput(pointInput) {
     this->pointInput = pointInput;
     this->pointOutput = pointOutput;
     this->lastPointState= LOW;
     this->currentPointState = LOW;
+    this->pointToggle=false; //evt uitbreiden van moment naar toggle?
     init();
 }
 
-void Point:: init(){
+void Point::init(){
     pinMode(pointOutput,OUTPUT);
 }
 
-boolean Point::isPointActivated(){
-if (pointInput.isPressed()){
-    return true;
-}
-    return false;
-}
-
-//Dit allicht nog vervangen voor een functie die dingen met functies doet oid
-//voor nu stuur ie iig een output hoog
 void Point::activateOutput() {
-    if (pointInput.isPressed()) {
+    if (pointInput.isPressed()){
         currentPointState = HIGH;
         Serial.print("Point ");
         Serial.print(pointOutput);
         lastPointState = currentPointState;
-        setOutput();
+        pointToggle= true;
+        digitalWrite(pointOutput,HIGH);
+
+    }else{
+        digitalWrite(pointOutput,LOW);
     }
-
 }
-
+//En dan nu iets bedenken voor de verschillende modussen die een point kan hebben
 void Point::setOutput(){
-    digitalWrite(pointOutput,lastPointState); //vervangen door servoaansturing!
-}
+    if (pointToggle){
+    digitalWrite(pointOutput,HIGH); //vervangen door servoaansturing!
+}}
 
 void Point::deactivateOutput(){
     currentPointState = LOW;
@@ -50,4 +45,3 @@ void Point::deactivateOutput(){
 void Point::setFunction(byte chosenFunction) {
     pointFunction = chosenFunction;
 }
-

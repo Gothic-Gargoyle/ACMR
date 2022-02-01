@@ -7,11 +7,11 @@
 
 
 #include <Arduino.h>
-#include "SwitchBoxes/Button.h"
+#include "Button.h"
 //een point bestaat uit twee buttons en twee outputs
 class Point {
 private:
-    //input
+//input
     Button pointInput;
 
     //output
@@ -28,12 +28,12 @@ public:
     Point(Button pointInput, byte pointOutput);
     void init();
     boolean isPointActivated();
-    void activateOutput();
     void setFunction(byte chosenFunction);
-
     void deactivateOutput();
-
     void setOutput();
+    void activateOutput();
+
+    bool pointToggle;
 };
 
 
