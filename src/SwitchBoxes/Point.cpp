@@ -15,14 +15,11 @@ void Point::init(){
 
 void Point::activatePoint() {
     if (pointInput.isPressed()){
-        Serial.print("Point ");
-        Serial.print(pointOutput);;
         activateOutput();
-    }else{
-        deactivateOutput();
-    }
+}
 }
 
+//Verschillende functies, help hoe te integreren -> strategy pattern?
 void Point::activateOutput() {
     digitalWrite(pointOutput,HIGH);
 }
@@ -30,7 +27,7 @@ void Point::activateOutput() {
 void Point::deactivateOutput(){
     digitalWrite(pointOutput,LOW);
 }
-//Verschillende functies, help hoe te integreren
+
 
 
 
