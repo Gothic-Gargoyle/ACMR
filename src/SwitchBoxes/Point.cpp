@@ -2,31 +2,37 @@
 // Created by hylbr on 5-5-2021.
 //
 #include "Point.h"
-//een point is een samenvoeging van twee buttons en hun outputpins.
-Point::Point(Button pointInput,byte pointOutput) : pointInput(pointInput){
+//een point is een samenvoeging van een button en een outputpin.
+Point::Point(Button pointInput, byte pointOutput, PointAction *pointAction = nullptr) : pointInput(pointInput), pointAction_(pointAction){
     this->pointInput = pointInput;
     this->pointOutput = pointOutput;
+    this->pointAction_ = pointAction;
     init();
 }
-
+Point::~Point(){
+    delete this->pointAction_;
+}
 void Point::init(){
     pinMode(pointOutput,OUTPUT);
 }
 
+void Point::setFunction(PointAction *pointAction){
+    delete this->pointAction_;
+    this->pointAction_ = pointAction;
+}
+
 void Point::activatePoint() {
     if (pointInput.isPressed()){
-        activateOutput();
-}
+        Serial.print("Point activated");
+        digitalWrite(pointOutput,HIGH);
+        //this->pointAction_->PointFunction(pointOutput);
+}else{
+        digitalWrite(pointOutput,LOW);
+    }
 }
 
-//Verschillende functies, help hoe te integreren -> strategy pattern?
-void Point::activateOutput() {
-    digitalWrite(pointOutput,HIGH);
-}
 
-void Point::deactivateOutput(){
-    digitalWrite(pointOutput,LOW);
-}
+
 
 
 
