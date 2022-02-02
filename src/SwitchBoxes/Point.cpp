@@ -22,6 +22,7 @@ void Point::setFunction(PointAction *pointAction){
 }
 
 void Point::activatePoint() {
+    //testing purposes want apparantly doet de strategy het niet :(
     if (pointInput.isPressed()){
         Serial.print("Point activated");
         digitalWrite(pointOutput,HIGH);
