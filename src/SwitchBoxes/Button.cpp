@@ -30,6 +30,5 @@ byte Button::getButtonState(){
 }
 
 bool Button::isPressed(){
-    Serial.print("Button pressed!");
     return (getButtonState() == HIGH);
 }

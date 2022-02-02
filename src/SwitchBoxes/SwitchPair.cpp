@@ -11,17 +11,17 @@ SwitchPair::SwitchPair(Point yellowPoint, Point greenPoint) :  yellowPoint(yello
     this->switchState = UNTOUCHED;
 }
 
-void SwitchPair::switchPoint(Point point1, Point point2, byte stateSwitchTo) {
-    point1.activatePoint();
+void SwitchPair::switchPoint(Point *point1, Point *point2, byte stateSwitchTo) {
+    point1->activatePoint();
     switchState = stateSwitchTo;
 }
 
 void SwitchPair::switchGreenPoint() {
-    switchPoint(greenPoint, yellowPoint, GREEN);
+    switchPoint(&greenPoint, &yellowPoint, GREEN);
 }
 
 void SwitchPair::switchYellowPoint() {
-    switchPoint(yellowPoint,greenPoint, YELLOW);
+    switchPoint(&yellowPoint,&greenPoint, YELLOW);
 }
 
 void SwitchPair::switchPointPair(){

@@ -18,6 +18,6 @@ LayoutDriver::LayoutDriver(){
 }
 
 void LayoutDriver::run() {
-    //sp1.switchPointPair();
+    sp1.switchPointPair();
     motordriver.motorControl();
 }

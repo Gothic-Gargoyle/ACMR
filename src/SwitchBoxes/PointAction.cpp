@@ -9,8 +9,8 @@ void PointAction::PointFunction(byte i) {
 }
 
 void Moment::PointFunction(byte i) {
-    digitalWrite(i,HIGH);
     Serial.print("Moment");
+    digitalWrite(i,HIGH);
 }
 
 void Toggle::PointFunction(byte i) {

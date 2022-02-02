@@ -26,7 +26,7 @@ void Point::activatePoint() {
     if (pointInput.isPressed()){
         Serial.print("Point activated");
         digitalWrite(pointOutput,HIGH);
-        //this->pointAction_->PointFunction(pointOutput);
+        //this->pointAction_->PointFunction(pointOutput); //<- lijkt niet bij deze functie te komen, why.
 }else{
         digitalWrite(pointOutput,LOW);
     }

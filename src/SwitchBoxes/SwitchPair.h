@@ -16,13 +16,15 @@ private:
 
 public:
     SwitchPair(Point yellowPoint, Point greenPoint);
-    void switchPoint(Point point1, Point point2, byte stateSwitchTo);
+    void switchPoint(Point *point1, Point point2, byte stateSwitchTo);
     void switchYellowPoint();
     void switchGreenPoint();
     byte returnSwitchState();
 
 
     void switchPointPair();
+
+    void switchPoint(Point *point1, Point *point2, byte stateSwitchTo);
 };
 
 
