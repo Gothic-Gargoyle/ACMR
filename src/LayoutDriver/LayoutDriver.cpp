@@ -10,6 +10,7 @@ Button button2(3);
 
 Point *point1 = new Point(button1,12,(new(Moment)));
 Point *point2 = new Point(button2,13,(new(Moment)));
+
 SwitchPair sp1(*point1,*point2);
 
 Motordriver motordriver(11,7,8,A0);

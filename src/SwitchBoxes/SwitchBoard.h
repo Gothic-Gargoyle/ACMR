@@ -7,12 +7,12 @@
 #include "SwitchPair.h"
 class SwitchBoard {
 private:
-    static int switchingArray[10];
+    static SwitchPair switchingArray[10];
 public:
     SwitchBoard(SwitchPair *switchPairs);
     void addToSwitchBoard(SwitchPair switchPair);
     void checkSwitchBoard();
-    static int showSwitchBoardPair(int id);
+    static SwitchPair showSwitchBoardPair(int id);
     SwitchPair *returnSwitchBoard();
 };
 

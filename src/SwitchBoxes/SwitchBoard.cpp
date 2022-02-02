@@ -17,7 +17,7 @@ void SwitchBoard::addToSwitchBoard(SwitchPair switchPair) {
     //switchPair ? switchingArray;
 }
 
-int SwitchBoard::showSwitchBoardPair(int id){
+SwitchPair SwitchBoard::showSwitchBoardPair(int id){
     return switchingArray[id];
 }
 
