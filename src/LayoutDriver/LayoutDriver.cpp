@@ -1,7 +1,6 @@
 ﻿//
-// Created by hylbr on 5-5-2021.
+// Created by $GO on 5-5-2021.
 //
-
 #include <SwitchBoxes/SwitchPair.h>
 #include <MotorControl/Motordriver.h>
 #include "LayoutDriver.h"
