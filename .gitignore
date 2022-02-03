@@ -1,6 +1,0 @@
-.pio/*
-CMakeListsPrivate.txt
-cmake-build-*/ 
-/.idea/*
-/test/README
-/lib/*
